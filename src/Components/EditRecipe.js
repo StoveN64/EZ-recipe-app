@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import UserContext from "../context/UserContext";
 import { firestore } from "../firebase";
-import Recipe from "./Recipe";
+// import Recipe from "./Recipe";
 
 const EditRecipe = (props) => {
     const [name, setName] = useState("");

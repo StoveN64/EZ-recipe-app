@@ -8,7 +8,7 @@ const AuthHome = () => {
 
     const signIn = async () => {
       await signInWithGoogle()
-      history.push("/")
+      history.push("/list")
     }
     
     return (
