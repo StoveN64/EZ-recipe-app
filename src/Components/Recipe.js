@@ -3,6 +3,10 @@ import { useHistory } from "react-router"
 import UserContext from "../context/UserContext"
 import { firestore } from "../firebase"
 
+import '../Styles/singleRecipe.css'
+
+
+
 const Recipe = (props) => {
     const [recipe, setRecipe] = useState(undefined);
     const user = useContext(UserContext);
@@ -41,22 +45,41 @@ const Recipe = (props) => {
     const renderRecipe = () => {
         const recipeData = recipe.data()
         return (
-        <>
-        <h2>{recipeData.name}</h2>
-        <ul> {renderIngredients()}</ul>
-        <pre>
-            <p>{recipeData.description}</p>
-        </pre>
-        </>
+        <div style={{ background: "rgba(255, 255, 255, 0.479)"}} className="recipe-info">
+            <h2 style={{
+                // textAlign: 'center',
+                textDecoration: 'underline'
+            }}
+            >{recipeData.name}</h2>
+            <ul style={{
+                display: 'flex',
+                flexDirection: 'column',
+                marginTop: '20px',
+                marginLeft: '20px',
+                listStyle: 'square',
+                
+
+            }} className="recipe-ingreds"> {renderIngredients()}</ul>
+                <pre style={{whiteSpace: 'pre-wrap', overflowWrap: 'break-word'}}>
+                    <p style={{
+                        marginLeft: '20px',
+                        marginTop: '20px',
+                        listStyle: 'lower-alpha',
+                        
+
+                    }} className="recipe-desc">{recipeData.description}</p>
+                </pre>
+        </div>
      )
     };
 
     return (
-    <div className="recipe">
+    <div >
         {recipe && renderRecipe()}
-        <button onClick={deleteRecipe}>Delete Recipe</button>
-        <button onClick={() => history.push(`/edit/${props.match.params.id}`)}>Edit your Recipe</button>
-        
+        <div className="recipe">
+        <button className="delete" onClick={deleteRecipe}>Delete Recipe</button>
+        <button className="edit" onClick={() => history.push(`/edit/${props.match.params.id}`)}>Edit your Recipe</button>
+        </div>
     </div>
     )
 }

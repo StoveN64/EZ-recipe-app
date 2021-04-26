@@ -1,0 +1,10 @@
+.about-container{
+    display: flex;
+    padding: 10px;
+}
+
+.mono{
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+}

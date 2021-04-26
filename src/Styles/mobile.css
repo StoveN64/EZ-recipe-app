@@ -1,0 +1,51 @@
+
+ @media (max-width: 900px) {
+    /* Styles will only be applied when view port width is 768px and lower */
+     .new-title, .new-recipe-name, .new-ingreds, .new-description {
+      font-size: 20px;
+      height: 100px;
+    }
+
+    .new-ingreds{
+        height: 40vh;
+    }
+    .tabs, button{
+        font-size: 20px;
+    }
+
+    .edit-title, .edit-recipe-name, .edit-ingreds, .edit-description {
+      font-size: 20px;
+      height: 100px;
+    }
+    .edit-ingreds{
+        height: 40vh;
+    }
+    .edit-description{
+        height: 40vh;
+    }
+    button{
+        font-size: 20px;
+        background-color: blanchedalmond;
+    }
+
+    .title{
+      font-size: 80px;
+      color: #266150;
+      z-index: 10;
+    }
+
+    .title::before{
+      content: '';
+      width: 0%;
+      height: 76px;
+      background-color: blanchedalmond;
+      position: absolute;
+      bottom: -10px;
+      animation: 1s underline ease-in-out forwards 2s;
+      mix-blend-mode: screen;
+      z-index: -1;
+      border-radius: 20px;;
+    }
+  }
+
+

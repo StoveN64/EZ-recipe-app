@@ -7,6 +7,7 @@ import List from './Components/List';
 import NavBar from './Components/NavBar';
 import NewRecipe from "./Components/NewRecipe"
 import Recipe from './Components/Recipe';
+import About from './Components/About'
 
 const Router = () => {
 
@@ -28,7 +29,7 @@ const Router = () => {
                         </Route>
                         <Route path="/recipe/:id" component={Recipe}/>
                         <Route path="/edit/:id" component={EditRecipe}/>
-
+                        <Route path="/about" component={About}/>
                     </>
                 ) : (
                     <>

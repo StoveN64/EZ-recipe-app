@@ -1,8 +1,29 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import styled from "styled-components";
 import UserContext from "../context/UserContext";
 import { firestore } from "../firebase";
-// import Recipe from "./Recipe";
+import '../Styles/edit.css'
+
+const Resave = styled.button`
+-webkit-border-radius: 27;
+-moz-border-radius: 27;
+border-radius: 27px;
+-webkit-box-shadow: 0px 1px 3px #666666;
+-moz-box-shadow: 0px 1px 3px #666666;
+box-shadow: 0px 1px 3px #666666;
+font-family: Courier New;
+color: #000000;
+background: #ffffff;
+border: solid #266150 2px;
+text-decoration: none;
+cursor: pointer;
+font-size: 25px;
+&:hover{
+    background: #955251;
+    text-decoration: none;
+  }
+`;
 
 const EditRecipe = (props) => {
     const [name, setName] = useState("");
@@ -45,26 +66,26 @@ const EditRecipe = (props) => {
     };
 
     return <div className="edit-recipe">
-        <h1>Edit Recipe</h1>
-        <form>
-            <input 
+        <h1 className="edit-title">Edit Recipe</h1>
+        <form className="edit-form">
+            <input className="edit-recipe-name"
             type='text' 
             placeholder='name' 
             value={name} 
             onChange={(e) => setName(e.target.value)}
             />{""}
-            <input 
+            <textarea className="edit-ingreds"
             type='text' 
             placeholder='Ingredients' 
             value={ingredients} 
             onChange={(e) => setIngredients(e.target.value)}
             />
-            <textarea
+            <textarea className="edit-description"
             placeholder='Description' 
             value={description} 
             onChange={(e) => setDescription(e.target.value)}
             />
-            <button onClick={saveRecipe}>Save Recipe</button>
+            <Resave onClick={saveRecipe}>Save Recipe</Resave>
         </form>
     </div>
 }

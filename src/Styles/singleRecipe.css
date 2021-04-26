@@ -1,0 +1,48 @@
+
+.recipe{
+    /* margin: 50px; */
+    padding: 20px;
+    margin-left: 500px;
+    
+}
+
+
+
+.delete{
+    -webkit-border-radius: 27;
+    -moz-border-radius: 27;
+    border-radius: 27px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Courier New;
+    color: #000000;
+    background: #ffffff;
+    border: solid #266150 2px;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.edit{
+    -webkit-border-radius: 27;
+    -moz-border-radius: 27;
+    border-radius: 27px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Courier New;
+    color: #000000;
+    background: #ffffff;
+    border: solid #266150 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.delete:hover{
+    background: #955251;
+    text-decoration: none;
+}
+.edit:hover{
+    background: #955251;
+    text-decoration: none;
+}
